@@ -1,0 +1,26 @@
+import "wtypesbase.idl";
+[
+    uuid(12345678-1234-ABCD-EF00-0123456789AB),
+    version(1.0)
+]
+
+interface winspool
+{
+    typedef [context_handle] void* PRINTER_HANDLE;
+    typedef [handle] wchar_t* STRING_HANDLE;
+    // [MS-RPRN] common info container structures
+    typedef struct _DEVMODE_CONTAINER {
+        DWORD cbBuf;
+        [size_is(cbBuf), unique] BYTE* pDevMode;
+    } DEVMODE_CONTAINER;
+
+    // [MS-RPRN] methods
+    DWORD RpcEnumPrinters();
+    DWORD RpcOpenPrinter(
+            [in, string, unique] STRING_HANDLE pPrinterName,
+            [out] PRINTER_HANDLE* pHandle,
+            [in, string, unique] wchar_t* pDatatype,
+            [in] DEVMODE_CONTAINER* pDevModeContainer,
+            [in] DWORD AccessRequired
+        );
+}

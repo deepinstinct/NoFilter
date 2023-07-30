@@ -1,0 +1,27 @@
+import "wtypesbase.idl";
+[
+    uuid(923c9623-db7f-4b34-9e6d-e86580f8ca2a),
+    version(1.0)
+]
+
+interface SyncController
+{
+    int AccountsMgmtRpcCreateAccount();
+    int AccountsMgmtRpcDeleteAccount();
+    int AccountsMgmtRpcConvertWebAccountIdFromAppSpecificId();
+    int AccountsMgmtRpcConvertWebAccountIdToAppSpecificId();
+    int AccountsMgmtRpcSyncAccount();
+    int AccountsMgmtRpcSyncAccountAndWaitForCompletion();
+    int AccountsMgmtRpcQueryAccountProperties();
+    int AccountsMgmtRpcSaveAccountProperties();
+    int AccountsMgmtRpcEnumAccounts();
+    int AccountsMgmtRpcAdviseAccount();
+    int AccountsMgmtRpcUnadviseAccount();
+    int AccountsMgmtRpcGetNotifications();
+    int AccountsMgmtRpcDiscoverExchangeServerConfig();
+    int AccountsMgmtRpcDiscoverExchangeServerAuthType([in, string] const wchar_t* ServerAddress, [out] int* IntOut);
+    int AccountsMgmtRpcVerifyExchangeMailBoxTokenAuth();
+    int AccountsMgmtRpcDiscoverInternetMailServerConfig();
+    int AccountsMgmtRpcCancelDiscoverInternetMailServerConfig();
+    int AccountsMgmtRpcMayIgnoreInvalidServerCertificate();
+}

@@ -1,0 +1,15 @@
+.vs/NoFilter/v16/
+
+Debug/
+
+Release/
+
+x64/
+
+NoFilter/Debug/
+
+NoFilter/Release/
+
+NoFilter/x64/
+
+*_s.c

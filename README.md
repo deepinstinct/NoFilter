@@ -11,6 +11,7 @@ Tool for abusing the Windows Filtering Platform for privilege escalation. It can
 
 ## References
 
+* [DEF CON talk](https://www.youtube.com/watch?v=73z3-j9uGis)
 * https://www.deepinstinct.com/blog/nofilter-abusing-windows-filtering-platform-for-privilege-escalation
 * https://googleprojectzero.blogspot.com/2021/08/understanding-network-access-windows-app.html
 * https://scorpiosoftware.net/2022/12/25/introduction-to-the-windows-filtering-platform/
